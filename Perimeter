@@ -1,0 +1,39 @@
+You have a grid representing a map where each cell is either land (represented by 1) or water (represented by 0). The grid is surrounded entirely by water, and there is exactly one contiguous island (i.e., a connected group of land cells) within the grid.
+
+The island does not contain any "lakes," meaning all land cells of the island are directly connected to the water surrounding the grid.
+
+Your task is to determine the perimeter of this island, where the perimeter is defined as the total length of the boundary that surrounds the island. Each land cell contributes to the perimeter based on how many of its sides are exposed to water (i.e., the boundary of the grid).One cell is a square with side length 1.
+
+The dimensions of the grid are such that its width and height do not exceed 100 cells each.
+
+
+
+Example 1:
+Input=4
+4
+0 1 0 0
+1 1 1 0
+0 1 0 0
+1 1 0 0
+Output=16
+Explanation: The perimeter is the 16 yellow stripes in the image above.
+
+Example 2:
+Input=1
+1
+1
+Output: 4
+Example 3:
+Input=1
+2
+1 0
+Output: 4
+ 
+
+Constraints:
+
+row == grid.length
+col == grid[i].length
+1 <= row, col <= 100
+grid[i][j] is 0 or 1.
+There is exactly one island in grid.
