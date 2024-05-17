@@ -1,0 +1,39 @@
+You are playing a treasure hunt game in your college,all the particepents  need to start from a 0th location. When you find a hint you need to visit that location, If any one visit all locations he/she will be the winner. When you visit a location you may find a set of hints in it. Each hint leads to another location, and you can take all of them with you and visit those locations.
+
+Given an array locations where each  locations[i] may consists of some hints,
+Return true if you are able to visit all the locations otherwise false.
+
+input format : an integer n (number of locations)
+			   space seperated integers (hints placed in each locations,if there is no hint in the location then emptyspace)
+output format : true or false
+
+Example 1:
+Input= 4
+1
+2
+3
+	// location 4 doesnot have any hint so empty space
+Output: true
+Explanation: 
+We visit location 0 and pick up hint 1.
+We then visit location 1 and pick up hint 2.
+We then visit location 2 and pick up hint 3.
+We then visit location 3.
+Since we were able to visit every location, we return true.
+
+Example 2:
+Input=4
+1 3
+3 0 1
+2
+0
+Output=false
+Explanation: We can not enter location 2 since the only hint that leads to it is in that location .
+
+Constraints:
+n == location.length
+2 <= n <= 1000
+0 <= location[i].length <= 1000
+1 <= sum(location[i].length) <= 3000
+0 <= locations[i][j] < n
+All the values of locations[i] are unique.
